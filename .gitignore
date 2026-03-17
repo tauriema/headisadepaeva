@@ -1,0 +1,22 @@
+# Sõltuvused / Dependencies
+node_modules/
+
+# Keskkonna muutujad / Environment variables
+.env
+.env.local
+.env.*.local
+
+# Operatsioonisüsteemi failid / OS files
+.DS_Store
+Thumbs.db
+
+# Redaktori failid / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logifailid / Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
