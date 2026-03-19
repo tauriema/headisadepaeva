@@ -25,7 +25,7 @@ app.get("/annaarvustus", (req, res) => {
 });
 
 app.get("/reklaamivabariik", (req, res) => {
-  res.json({ message: "reklaamide spam ja tere" });
+  res.json({ message: "reklaamide spam" });
 });
 
 // Server kuulab pordil 3000 / Server listens on port 3000
