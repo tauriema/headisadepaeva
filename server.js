@@ -9,22 +9,22 @@ const frontendPath = path.join(__dirname, 'frontend', 'frontend', 'dist');
 app.use(express.static(frontendPath));
 
 // Login leht
-app.get("/login", (req, res) => {
-  res.json({ message: "login" });
+app.get('/login', (req, res) => {
+  res.json({ message: 'login' });
 });
 
 // Leht kus saab arvustusi vaadata
-app.get("/arvustused", (req, res) => {
-  res.json({ message: "arvustuste vaatamise leht" });
+app.get('/arvustused', (req, res) => {
+  res.json({ message: 'arvustuste vaatamise leht' });
 });
 
 // Leht kus saab arvustusi anda
-app.get("/annaarvustus", (req, res) => {
-  res.json({ message: "arvustuste andmise leht" });
+app.get('/annaarvustus', (req, res) => {
+  res.json({ message: 'arvustuste andmise leht' });
 });
 
-app.get("/reklaamivabariik", (req, res) => {
-  res.json({ message: "reklaamide spam" });
+app.get('/reklaamivabariik', (req, res) => {
+  res.json({ message: 'reklaamide spam' });
 });
 
 // Frontend rakendus
