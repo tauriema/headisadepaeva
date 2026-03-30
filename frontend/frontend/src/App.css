@@ -5,106 +5,123 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #b8ab80;
+  background: #222;
+  color: black;
 }
 
 .app {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 100vh;
 }
 
-.screen {
+.phone {
   width: 390px;
   min-height: 844px;
   background: #b8ab80;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 40px 20px 20px;
-  border-radius: 20px;
+  gap: 16px;
 }
 
-.card {
-  width: 100%;
+/* TEXT FIX */
+button, a, p, div {
+  color: black;
+  text-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.logoImg {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.brandCard {
   background: #e7dfb9;
-  border-radius: 24px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
   padding: 20px;
   text-align: center;
 }
 
-.logo-card {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.brandCard.small {
+  padding: 15px;
 }
 
-.logo {
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 2px;
+.brandText {
+  font-weight: bold;
 }
 
-.user-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
+/* AVATAR */
 .avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: #f4f0dc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
+  font-size: 60px;
+  text-align: center;
 }
 
-.name {
+/* PILLS */
+.pill {
   background: #f4f0dc;
-  padding: 10px 20px;
+  padding: 12px;
   border-radius: 20px;
-  font-weight: 700;
+  text-align: center;
 }
 
-.menu-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.menu-card button {
+/* BUTTONS */
+.mainBtn {
+  padding: 14px;
   border: none;
-  background: #f4f0dc;
-  padding: 14px 16px;
-  border-radius: 18px;
-  font-size: 16px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
-.menu-card button:hover {
-  background: #efe6c5;
+.green {
+  background: #b8f5a2;
 }
 
-.bottom-nav {
-  margin-top: auto;
-  width: 100%;
+.orange {
+  background: #f6bd79;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
   background: #f4f0dc;
-  border-radius: 22px;
+  padding: 12px;
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.red {
+  background: #ffb0b0;
+}
+
+/* NAV */
+.bottomNav {
+  margin-top: auto;
+  background: #f4f0dc;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
-  padding: 14px 10px;
-  font-weight: 700;
+  border-radius: 20px;
 }
 
-.bottom-nav .active {
-  color: #2f7efc;
+.active {
+  color: blue;
+}
+
+/* PREMIUM */
+.premium {
+  background: red;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 200px;
 }
