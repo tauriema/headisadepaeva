@@ -1,13 +1,12 @@
-const express = require("express");
+const express = require('express');
+const path = require('path');
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Võimaldab JSON-i päringute kehas / Allow JSON in request bodies
-app.use(express.json());
+const frontendPath = path.join(__dirname, 'frontend', 'frontend', 'dist');
 
-// Avaleht
-app.get("/", (req, res) => {
-  res.json({ message: "koduleht" });
-});
+app.use(express.static(frontendPath));
 
 // Login leht
 app.get("/login", (req, res) => {
@@ -28,7 +27,11 @@ app.get("/reklaamivabariik", (req, res) => {
   res.json({ message: "reklaamide spam" });
 });
 
-// Server kuulab pordil 3000 / Server listens on port 3000
-app.listen(3000, () => {
-  console.log("Server töötab pordil 3000 / Server is live on port 3000");
+// Frontend rakendus
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server töötab pordil ${PORT}`);
 });
